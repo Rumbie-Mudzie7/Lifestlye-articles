@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: lifestyle-articles-capstone-project
+  api_key: '775852358631275'
+  api_secret: IK-Qjn0dHFAd-c6CaL2IDF-KSvw
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: lifestyle-articles-capstone-project
+  api_key: '775852358631275'
+  api_secret: IK-Qjn0dHFAd-c6CaL2IDF-KSvw
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: lifestyle-articles-capstone-project
+  api_key: '775852358631275'
+  api_secret: IK-Qjn0dHFAd-c6CaL2IDF-KSvw
+  enhance_image_tag: true
+  static_file_support: false
