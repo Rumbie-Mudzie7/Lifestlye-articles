@@ -11,6 +11,36 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-expand-md bg-dark">
+      <%= link_to 'RueMotors', root_path, class: "navbar-brand" %>
+        <ul class="navbar-nav">
+          <% categories.each do | category | %>
+            <li class="nav-item"><%= link_to category.name, category, class: "nav-link" %></li>
+          <% end %>
+        </ul>
+         
+      <div class="justify-content-end">
+        <% if user_signed_in? %>
+          <%= link_to current_user.name, "#", class: 'username' %>
+          <%= link_to 'Sign out', destroy_user_session_path, method: :delete%>
+        <% else %>
+          <%= link_to 'Sign in', new_session_path, class: 'nav-link' %>
+        <% end %>
+      </div>
+      
+    </nav>
+    <% if notice.present? %>
+      <div class="notice">
+        <p> <%= notice %> </p>
+      </div>
+    <% end %>
+    <% if alert.present? %>
+      <div class="alert">
+        <p> <%= alert %> </p>
+      </div>
+    <% end %>
+    <main class="main">
+      <%= yield %>
+    </main>
   </body>
 </html>
