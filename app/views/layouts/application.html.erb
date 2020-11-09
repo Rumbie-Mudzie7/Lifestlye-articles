@@ -19,14 +19,16 @@
           <% end %>
         </ul>
          
-      <div class="justify-content-end">
+      <ul class="navbar-nav justify-content-end">
         <% if user_signed_in? %>
-          <%= link_to current_user.name, "#", class: 'username' %>
-          <%= link_to 'Sign out', destroy_user_session_path, method: :delete%>
+          <li class="nav-item"><%=link_to "Create Article", new_article_path %></li>
+          <li class="nav-item"><%= link_to current_user.name, "#", class: 'username' %></li>
+          <li class="nav-item"><%= link_to 'Sign out', sign_out_path %></li>
         <% else %>
-          <%= link_to 'Sign in', new_session_path, class: 'nav-link' %>
+          <li class="nav-item"><%= link_to "Sign up", new_user_path, class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to 'Sign in', new_session_path, class: 'nav-link' %></li>
         <% end %>
-      </div>
+      </ul>
       
     </nav>
     <% if notice.present? %>
@@ -42,5 +44,9 @@
     <main class="main">
       <%= yield %>
     </main>
+    <footer>
+      <nav class="navbar navbar-expand-md bg-primary">
+      </nav>
+    </footer>
   </body>
 </html>
