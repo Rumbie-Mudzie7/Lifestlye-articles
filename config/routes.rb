@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get 'sign_out', to: 'sessions#destroy', as: 'sign_out'
   resources :categories
   resources :articles
+  resources :votes, only: %i[create destroy]
   root 'articles#index'
 end
