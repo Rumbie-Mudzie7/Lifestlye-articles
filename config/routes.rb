@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'sign_in', to: 'sessions#new', as: 'sign_in'
   get 'sign_out', to: 'sessions#destroy', as: 'sign_out'
   resources :categories
-  resources :articles
-  resources :votes, only: %i[create destroy]
+  resources :articles do
+    resources :votes, only: %i[create destroy]
+  end
   root 'articles#index'
 end

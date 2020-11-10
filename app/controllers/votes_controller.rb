@@ -35,3 +35,4 @@ before_action :find_vote, only: [:destroy]
     end 
 
 end
+
