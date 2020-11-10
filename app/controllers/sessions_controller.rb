@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
-  def new
-  end
+  def new; end
 
   def create
     @user = User.find_by(name: params[:name])
@@ -18,5 +17,4 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to root_url, notice: 'Signed out Successfully'
   end
-  
 end

@@ -1,5 +1,5 @@
 module ApplicationHelper
-    def categories
-        Category.all
-    end
+  def categories
+    Category.all
+  end
 end
