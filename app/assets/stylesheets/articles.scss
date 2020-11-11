@@ -22,5 +22,26 @@
 }
 
 .footer-background {
-    background-color: darkslategrey;
+  background-color:#4E443F;
+  position: absolute;
+  bottom: 0;
+}
+
+.articles-container {
+  display: grid;
+  grid-template-columns: auto auto;
+
+  .article-container {
+    display: grid;
+    grid-template-columns: auto auto; 
+    height: 40vh;
+
+    .article-content {
+        // width: 100%;
+    }
+
+    .article-image {
+        // width: 100%;
+    }
+  }
 }

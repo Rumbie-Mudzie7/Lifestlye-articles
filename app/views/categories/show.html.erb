@@ -1,20 +1,17 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
 
-<p>
-  <strong>Priority:</strong>
-  <%= @category.priority %>
-</p>
+<div class="col-sm-6 col-md-6 col-xs-6">
+    <% @category.articles.each do |article| %>
+              <div class="thumbnail" style="border:none; background:white;">
 
-<% @category.articles.each do |article| %>
-  <p><%= article.title %></p>
-    <div>
-      <%= cl_image_tag(article.image) %>
-    </div>
-<% end %>
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+              <div class="col-sm-6 col-md-6 col-xs-12 image-container">
+              
+               <%= cl_image_tag(article.image) %>
+              </div>
+
+              <div class="col-sm-6 col-md-6 col-xs-12">  
+                <p><%= article.title %></p>
+              </div>
+              </div>
+  <% end %>
+ </div>
