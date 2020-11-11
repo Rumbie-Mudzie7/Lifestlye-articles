@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
+    @categories = Category.all
     @articles = Article.all
   end
 

@@ -1,5 +1,10 @@
-<div class="grid_container">
-    <div class="featured" style="background-image: url(<%= main_image %>)">
+<div class="grid-container">
+        <div class="featured" style="background-image: url(<%= main_image %>)">
 
-    </div>
+        </div>
+    <% @categories.includes(:articles).all.order(priority: 'DESC').each do |category| %>
+        <div class="category" style="background-image: url(<%= category.articles.last.image %>)">
+            <h3><%= category.name %></h3>
+        </div>
+    <% end %>
 </div>
