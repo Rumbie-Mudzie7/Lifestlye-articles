@@ -10,5 +10,11 @@
   <%= @category.priority %>
 </p>
 
+<% @category.articles.each do |article| %>
+  <p><%= article.title %></p>
+    <div>
+      <%= cl_image_tag(article.image) %>
+    </div>
+<% end %>
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

@@ -26,6 +26,7 @@ class ArticlesController < ApplicationController
     # @article.image.attach(params[:article][:image])
     respond_to do |format|
       if @article.save
+        ArticleCategory.create(category_id: @category, article_id: @article.id) 
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else
@@ -68,6 +69,6 @@ class ArticlesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def article_params
-    params.require(:article).permit(:title, :text, :image)
+    params.require(:article).permit(:title, :text, :image, category_ids: [])
   end
 end
