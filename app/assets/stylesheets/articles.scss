@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .featured { 
   height: 70vh; 
   background-repeat: no-repeat;
@@ -21,27 +28,24 @@
   display: grid;
 }
 
-.footer-background {
-  background-color:#4E443F;
-  position: absolute;
-  bottom: 0;
+// .footer-background {
+//   background-color:#4E443F;
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+// }
+.spacer {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
 }
 
-.articles-container {
-  display: grid;
-  grid-template-columns: auto auto;
+.footer-background {
+  height: 50px;
+  background-color: #4E443F;
+}
 
-  .article-container {
-    display: grid;
-    grid-template-columns: auto auto; 
-    height: 40vh;
-
-    .article-content {
-        // width: 100%;
-    }
-
-    .article-image {
-        // width: 100%;
-    }
-  }
+.category1 {
+  height: 50vh;
 }

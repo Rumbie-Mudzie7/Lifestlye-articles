@@ -11,9 +11,9 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-md bg-dark">
-      <%= link_to 'RueMotors', root_path, class: "navbar-brand" %>
-        <ul class="navbar-nav">
+    <nav class="navbar navbar-expand-md bg-light">
+      <i class="fas fa-truck-pickup"></i><%= link_to 'RueMotors', root_path, class: "navbar-brand" %>
+        <ul class="navbar-nav ml-auto">
           <% categories.each do | category | %>
             <li class="nav-item"><%= link_to category.name, category, class: "nav-link" %></li>
           <% end %>
@@ -27,6 +27,7 @@
         <% else %>
           <li class="nav-item"><%= link_to "Sign up", new_user_path, class: "nav-link" %></li>
           <li class="nav-item"><%= link_to 'Sign in', new_session_path, class: 'nav-link' %></li>
+          <i class="fa fa-search mt-2" aria-hidden="true"></i>
         <% end %>
       </ul>
       
@@ -44,7 +45,9 @@
     <main class="main">
       <%= yield %>
     </main>
+    <div class="spacer">
       <%= render 'layouts/footer' %> 
+    </div>
   </body>
 </html>
 
