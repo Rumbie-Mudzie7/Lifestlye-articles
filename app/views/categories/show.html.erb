@@ -1,9 +1,9 @@
 <div class="container-fluid">
   <div class="row">
     <% @category.articles.each do |article| %>
-      <div class="col-6 row p-0 m-0 category1">
+      <div class="col-6 row p-0 m-0 mb-2 category1">
         <div class="col-6 p-0 m-0 article-background" style="background-image: url(<%= article.image %>)"></div>
-        <div class="col-6 px-5">
+        <div class="col-6 px-5 mb-2">
           <h5><%= article.title %></h5>
           <div class="underline mb-3"></div>
           <p class="text-italic"><%= article.text %></p>
