@@ -32,6 +32,12 @@ body {
   grid-column: 1 / span 4;
 }
 
+.article-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .category { 
   height: 30vh; 
   background-repeat: no-repeat;
@@ -51,7 +57,7 @@ body {
   right: 0;
 }
 
-#footer-text1, #footer-text2 {
+.footer-text {
   color: #BF582C;
 }
 
