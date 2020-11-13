@@ -11,13 +11,13 @@ RSpec.describe 'Session', type: :feature do
           visit new_user_path
           fill_in 'Name', with: :Tawonga
           click_button 'Create User'
-          sleep(6)
+          sleep(5)
           expect(page).to have_text('User was successfully created.')
         end
     end
     
 
-    describe 'Login process' do
+    describe 'Sign in' do
         scenario 'User can sign in successfully' do
           visit new_session_path
           fill_in 'Name', with: 'Rumbidzayi'

@@ -1,5 +1,23 @@
 # Lifestyle_Articles Capstone with Ruby on Rails
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+Lifestyle articles is a real-world-like project, built with business specifications to implement the following MVC specifications accordingly :
+
+1.  Authentication:
+-   The user signs up and signs in to the app, only by typing their name.
+-   The user signs out of to the app
+
+2.  The user is presented with the homepage with the following features:
+-   Featured article with full-width image and title in the first row. This should be the article 
+    with the number of highest votes.
+-   List of all categories in order of priority.
+
+3.  When the user clicks the category name they can see all articles in that category:
+-   Articles are sorted by most recent.
+-   Each article displays: image, title, truncated text as preview and its author name.
+-   A button to add a vote for article (each user can vote only once).
+
+4.  When user opens "New Article" page:
+-   A form with all necessary fields is displayed.
+
 ## Built With
 
 - Ruby v2.7.0
@@ -15,7 +33,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Ruby: 2.6.3
+Ruby: 2.7.0
 Rails: 6
 Postgres: >=9.5
 
@@ -46,15 +64,26 @@ Setup database with:
 ```
 rails db:drop db:create db:migrate
 ```
+- To clone the repo to your local repository. Follow this steps
+- <code> git clone https://github.com/Rumbie-Mudzie7/Lifestlye-articles.git</code>
+- <code> cd lifestlye-articles</code>
 
-### Github Actions
+### Validations
+-   Presence of "Name", "Title" and "Text" is enforced to be true.
+-   Maximum length of "Title"
 
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
+### Tests
+1.  Model tests on validations and associations:
+-   article_spec.rb
+-   article_category_spec.rb
+-   category_spec.rb
+-   user_spec.rb
+-   votes_spec.rb
 
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
+2.  Feature tests for authentication:
+-   session_spec.rb
+
+Run rspec in the terminal.
 
 ### Usage
 
@@ -72,10 +101,9 @@ Open `http://localhost:3001/` in your browser.
     rpsec --format documentation
 ```
 
-
 ### Deployment
 
-TBA
+
 
 ## Author
 
@@ -95,9 +123,10 @@ Feel free to check the [issues page](issues/).
 Give a :star:️ if you like this project!
 
 ## Acknowledgments
-
-TBA
+Nelson Sakwa
+Microverse
+Odin Project
 
 ## :memo: License
 
-TBA
+MIT
