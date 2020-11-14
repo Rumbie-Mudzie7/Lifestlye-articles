@@ -1,6 +1,7 @@
 <div class="grid-container">
         <div class="featured" style="background-image: url(<%= main_image %>)">
-
+            <p class="icons1">The whole new range of motor vehicles</p>
+            <p class="icons2">As the year ends, all power and exhaust is powerful and great and supercedes from the heart of 2002 to 2021.</p>
         </div>
     <% @categories.includes(:articles).all.order(priority: 'DESC').each do |category| %>
         <div class="category" style="background-image: url(<%= category.articles.last.image %>)">

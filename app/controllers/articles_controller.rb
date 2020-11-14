@@ -27,7 +27,7 @@ class ArticlesController < ApplicationController
     # @article.image.attach(params[:article][:image])
     respond_to do |format|
       if @article.save
-        ArticleCategory.create(category_id: @category, article_id: @article.id) 
+        ArticleCategory.create(category_id: @category, article_id: @article.id)
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else
