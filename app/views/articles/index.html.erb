@@ -4,7 +4,7 @@
             <p class="icons2">As the year ends, all power and exhaust is powerful and great and supercedes from the heart of 2002 to 2021.</p>
         </div>
     <% @categories.includes(:articles).all.order(priority: 'DESC').each do |category| %>
-        <div class="category" style="background-image: url(<%= category_art %>)">
+        <div class="category" style="background-image: url(<%= category_art(category) %>)">
             <h3><%= link_to category.name, category, class: "text-white category-links" %></h3>
             <p class="title-links"><%= category.articles.last.title %></p>
         </div>
