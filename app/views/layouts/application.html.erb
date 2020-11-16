@@ -26,7 +26,7 @@
       <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
           <li class="nav-item mr-2"><%=link_to "Create Article", new_article_path %></li>
-          <li class="nav-item mr-2"><%= link_to current_user.name, "#", class: 'username' %></li>
+          <li class="nav-item mr-2"><%= link_to current_user.name, edit_user_path(current_user), class: 'username' %></li>
           <li class="nav-item"><%= link_to 'Sign out', sign_out_path %></li>
         <% else %>
           <li class="nav-item mr-2"><%= link_to "Sign up", new_user_path, class: "nav-link" %></li>
