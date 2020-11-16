@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       redirect_to root_path, notice: 'You are successfully logged in!'
     else
       flash.now[:alert] = 'Invalid name'
-      render :new
+      redirect_to new_user_path
     end
   end
 

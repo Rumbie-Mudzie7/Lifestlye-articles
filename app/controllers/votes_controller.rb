@@ -9,16 +9,17 @@ class VotesController < ApplicationController
     else
       flash[:alert] = 'You are prohibited from voting:error!'
     end
-    redirect_to @article
+    redirect_to root_path
   end
 
   def destroy
     if vote_exists?
       @vote.destroy
-      flash[:notice] = 'You destroyed this article!'
+      flash[:notice] = 'You unvoted an article!'
     else
       flash[:alert] = 'You are prohibited from destroying this article!'
     end
+    redirect_to root_path
   end
 
   def find_article

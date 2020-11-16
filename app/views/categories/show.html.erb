@@ -8,9 +8,11 @@
           <div class="underline mb-3"></div>
           <p class="text-italic"><%= article.text %></p>
           <p class="article-athor">Authored by: <%= article.author.name %></p>
-          <button>
-            <%= vote_or_unvote(article) %>
-          </button>
+          <% if user_signed_in? %>
+            <button>
+              <%= vote_or_unvote(article) %>
+            </button>
+          <% end %>
         </div>
       </div>
     <% end %>
