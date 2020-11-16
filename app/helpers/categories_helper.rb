@@ -1,6 +1,6 @@
 module CategoriesHelper
     def last_article_in_category(category)
-      category.articles.last
+      category.articles.last if category.articles.any?
     end
 
     def last_article_title(category)
