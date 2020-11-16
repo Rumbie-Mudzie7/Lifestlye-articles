@@ -23,9 +23,15 @@ Lifestyle articles is a real-world-like project, built with business specificati
 - Ruby v2.7.0
 - Ruby on Rails v6
 
+![Screenshot](ruemotors.png)
+
+## Live Presentation
+
+[Live Presentation Link](https://www.loom.com/share/7f0103f79300496bb1d8078959b20aab)
+
 ## Live Demo
 
-TBA
+[Live Demo Link](https://rue-motors.herokuapp.com/)
 
 ## Getting Started
 
@@ -33,7 +39,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Ruby: 2.7.0
+Ruby: 2.7.1
 Rails: 6
 Postgres: >=9.5
 
@@ -62,7 +68,7 @@ Setup database with:
 - Reconfigure database.yml file for your local environment (i.e configuring development & test databases) to use a local username & password of your choice & run:
 
 ```
-rails db:drop db:create db:migrate
+rails db:migrate
 ```
 - To clone the repo to your local repository. Follow this steps
 - <code> git clone https://github.com/Rumbie-Mudzie7/Lifestlye-articles.git</code>
@@ -126,6 +132,7 @@ Give a :star:️ if you like this project!
 Nelson Sakwa
 Microverse
 Odin Project
+Heroku
 
 ## :memo: License
 
