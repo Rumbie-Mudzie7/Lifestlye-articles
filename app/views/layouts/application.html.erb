@@ -12,12 +12,16 @@
 
   <body>
     <nav class="navbar navbar-expand-md bg-light">
-      <i class="fa fa-language icons mr-1" aria-hidden="true"></i><i><%= link_to 'RueMotors', root_path, class: "navbar-brand text-primary" %></i>
-        <ul class="navbar-nav ml-auto">
-          <% categories.each do | category | %>
-            <li class="nav-item"><%= link_to category.name, category, class: "nav-link" %></li>
-          <% end %>
-        </ul>
+      <span>
+        <i class="fa fa-language icons mr-1" aria-hidden="true"></i><i>
+        <%= link_to 'RueMotors', root_path, class: "navbar-brand text-primary" %></i>
+      </span>
+
+      <ul class="navbar-nav ml-auto">
+        <% categories.each do | category | %>
+          <li class="nav-item"><%= link_to category.name, category, class: "nav-link" %></li>
+        <% end %>
+      </ul>
          
       <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
