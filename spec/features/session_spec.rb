@@ -10,7 +10,7 @@ RSpec.describe 'Session', type: :feature do
     scenario 'User can sign up successfully' do
       visit new_user_path
       fill_in 'Name', with: :Tawonga
-      click_button 'Create User'
+      click_button 'Sign up'
       sleep(5)
       expect(page).to have_text('User was successfully created.')
     end
