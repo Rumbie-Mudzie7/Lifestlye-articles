@@ -20,10 +20,10 @@ Lifestyle articles is a real-world-like project, built with business specificati
 
 ## Built With
 
-- Ruby v2.7.0
+- Ruby v2.7.1
 - Ruby on Rails v6
 
-![Screenshot](ruemotors.png)
+![Screenshot](app/assets/images/ruemotors.png)
 
 ## Live Presentation
 
