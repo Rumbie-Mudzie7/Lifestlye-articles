@@ -6,7 +6,7 @@
     <% @categories.includes(:articles).all.order(priority: 'DESC').each do |category| %>
         <div class="category" style="background-image: url(<%= category_article_image(category) %>)">
             <h3><%= link_to category.name, category, class: "text-success category-links" %></h3>
-            <p class="title-links text-info"><%= last_article_title(category) %></p>
+            <h4 class="title-links text-info"><%= last_article_title(category) %></h4>
         </div>
     <% end %>
 </div>
