@@ -9,7 +9,7 @@ class VotesController < ApplicationController
     else
       flash[:alert] = 'You are prohibited from voting:error!'
     end
-    redirect_to root_path
+    redirect_to category_path(@article)
   end
 
   def destroy
@@ -19,7 +19,7 @@ class VotesController < ApplicationController
     else
       flash[:alert] = 'You are prohibited from destroying this article!'
     end
-    redirect_to root_path
+    redirect_to category_path(@article)
   end
 
   def find_article

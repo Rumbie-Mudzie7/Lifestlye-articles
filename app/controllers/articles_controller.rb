@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @categories = Category.all
+    @categories = Category.all.includes(:articles).all.order(priority: 'DESC')
     @articles = Article.all
   end
 

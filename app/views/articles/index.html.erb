@@ -1,11 +1,11 @@
 <div class="grid-container">
         <div class="featured p-3" style="background-image: url(<%= main_image %>)">
           <div class="featured_text">
-            <p class="icons1">The whole new range of motor vehicles</p>
-            <p class="icons2">As the year ends, all power and exhaust is powerful and great and supercedes from the heart of 2002 to 2021.</p>
+            <p class="icons1"><%= main_article_title%></p>
+            <p>Votes: <%= count_votes %></>
           </div>
         </div>
-    <% @categories.includes(:articles).all.order(priority: 'DESC').each do |category| %>
+    <% @categories.each do |category| %>
         <div class="category p-3" style="background-image: url(<%= category_article_image(category) %>)">
             <h3><%= link_to category.name, category, class: "text-success category-links" %></h3>
             <p class="title-links text-info"><%= truncate(last_article_title(category), length: 20, omission: "..." ) %></p>
