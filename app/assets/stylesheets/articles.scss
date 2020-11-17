@@ -1,0 +1,131 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+.featured {
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-column: 1 / span 4;
+  position: relative;
+  color: #fff;
+}
+
+.article-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.category {
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  .title-links {
+    position: absolute;
+    bottom: 4rem;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+  }
+}
+
+.category-links {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: underline #cabb49;
+}
+
+.new-article {
+  max-width: 20rem;
+  margin: auto;
+}
+
+.grid-container {
+  display: grid;
+}
+
+.icon {
+  font-size: 0.9rem;
+  color: #bf582c;
+  margin-top: -7px;
+}
+
+.icons {
+  font-size: 1.2rem;
+  color: #bf582c;
+}
+
+.featured_text {
+  font-size: 0.8rem;
+  font-family: fantasy;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+
+  .icons1 {
+    color: #bf582c;
+  }
+}
+
+// .icons2 {
+//   // font-size: 0.7rem;
+//   // color: white;
+//   // font-family: fantasy;
+//   // font-weight: bold;
+//   // position: absolute;
+//   // top: 480px;
+//   // left: 100px;
+// }
+
+.footer {
+  background-color: #4e443f;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+}
+
+.footer-text {
+  color: #bf582c;
+  font-size: 0.6rem;
+}
+
+.footer-copy {
+  font-size: 0.6rem;
+}
+
+.category1 {
+  height: 50vh;
+}
+
+a:hover {
+  background-color: unset !important;
+  color: unset !important;
+}

@@ -1,0 +1,14 @@
+<div class="new-user ">
+<h1 class="text-info"> Sign In </h1>
+
+<%= form_tag sessions_path do %>
+    <div class="form-group">
+    <%= label_tag :name %>
+    <%= text_field_tag :name, params[:name], class: "form-control length-restriction" %>
+    </div>
+   
+    <div class="button">
+    <%= submit_tag "Sign In", class: "btn btn-primary" %>
+    </div>
+<% end %>
+</div>

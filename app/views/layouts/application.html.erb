@@ -7,9 +7,56 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/e2597287a1.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-expand-md bg-light">
+      <span>
+        <i class="fa fa-language icons mr-1" aria-hidden="true"></i><i>
+        <%= link_to 'RueMotors', root_path, class: "navbar-brand text-primary" %></i>
+      </span>
+
+      <ul class="navbar-nav ml-auto">
+        <% categories.each do | category | %>
+          <li class="nav-item"><%= link_to category.name, category, class: "nav-link" %></li>
+        <% end %>
+      </ul>
+         
+      <ul class="navbar-nav ml-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item mr-2"><%=link_to "Create Article", new_article_path %></li>
+          <li class="nav-item mr-2"><%= link_to current_user.name, edit_user_path(current_user), class: 'username' %></li>
+          <li class="nav-item"><%= link_to 'Sign out', sign_out_path %></li>
+        <% else %>
+          <li class="nav-item mr-2"><%= link_to "Sign up", new_user_path, class: "nav-link" %></li>
+          <li class="nav-item mr-2"><%= link_to 'Sign in', new_session_path, class: 'nav-link' %></li>
+          <i class="fa fa-search mt-2" aria-hidden="true"></i>
+        <% end %>
+      </ul>
+      
+    </nav>
+    <% if notice.present? %>
+      <div class="notice">
+        <p> <%= notice %> </p>
+      </div>
+    <% end %>
+    <% if alert.present? %>
+      <div class="alert">
+        <p> <%= alert %> </p>
+      </div>
+    <% end %>
+    <main class="main">
+      <%= yield %>
+    </main>
+    <div class="spacer">
+      <%= render 'layouts/footer' %> 
+    </div>
   </body>
 </html>
+
+
+
+
+         
+  
